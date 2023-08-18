@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang=" en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商店</title>
+  <script src="../bs/js/jquery.js"></script>
+  <script src="../bs/js/bootstrap.min.js"></script>
+  <script src="../bs/js/holder.min.js"></script>
+  <link rel="stylesheet" href="../bs/font-awesome-4.7.0/fonts/bootstrap-icons.css">
+  <link rel="stylesheet" href="../bs/font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="../bs/css/buttons.css">
+  <link rel="stylesheet" href="../bs/css/bootstrap.css">
+  <script src="../bs/js/jQuery3.4.1.js"></script>
+  <script src="../bs/js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="../css/shopping.css">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../img/1117.png_860.png" width="100px" height="100px"
+            alt="网站logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <div class="btn-group">
+                <button class="btn btn-danger btn-info" type="button">
+                  <a href="../index.html">首页</a>
+                </button>
+            </li>
+
+            <li class="nav-item dropdown">
+              <div class="btn-group">
+                <button class="btn btn-danger btn-info" type="button">
+                  <a href="puse.html">脸谱介绍</a>
+                </button>
+                <button type="button" class="btn btn-sm btn-danger dropdown-toggle dropdown-toggle-split"
+                  data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu bg-danger">
+                  <a class="dropdown-item bg-danger" href="pushi.html">谱式分类</a>
+                  <a class="dropdown-item bg-danger" href="puse.html">谱色介绍</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="btn-group">
+                <button class="btn btn-danger btn-info" type="button">
+                  <a href="active.html">活动页面</a>
+                </button>
+                <button type="button" class="btn btn-sm btn-danger dropdown-toggle dropdown-toggle-split"
+                  data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu bg-danger">
+                  <a class="dropdown-item bg-danger" href="activity1.html">戏曲邂逅</a>
+                  <a class="dropdown-item bg-danger" href="activity2.html">梨园春争霸</a>
+                  <a class="dropdown-item bg-danger" href="activity3.html">盛世中华</a>
+
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="btn-group">
+                <button class="btn btn-danger btn-info" type="button">
+                  <a href="jianshang.html">戏曲鉴赏</a>
+                </button>
+                <button type="button" class="btn btn-sm btn-danger dropdown-toggle dropdown-toggle-split"
+                  data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu bg-danger">
+                  <a class="dropdown-item bg-danger" href="xiquxinshang.html">戏曲欣赏</a>
+                  <a class="dropdown-item bg-danger" href="shipin.html">视频展示</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="btn-group">
+                <button class="btn btn-danger btn-info" type="button">
+                  <a href="history.html">历史发展</a>
+                </button>
+                <button type="button" class="btn btn-sm btn-danger dropdown-toggle dropdown-toggle-split"
+                  data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu bg-danger">
+                  <a class="dropdown-item bg-danger" href="juese.html">角色介绍</a>
+                  <a class="dropdown-item bg-danger" href="juzhong.html">剧种介绍</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="btn-group">
+                <button class="btn btn-danger btn-info" type="button">
+                  <a href="feedback1.html">研习交流</a>
+                </button>
+                <button type="button" class="btn btn-sm btn-danger dropdown-toggle dropdown-toggle-split"
+                  data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu bg-danger">
+                  <a class="dropdown-item bg-danger" href="shopping.html">精品礼物</a>
+                  <a class="dropdown-item bg-danger" href="fankui.html">反馈</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-danger nav-link btn-info" id="login-btn">登录</button>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="搜索" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- 模态框 -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">登录</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- 添加登录表单 -->
+          <form>
+            <div class="form-group">
+              <label for="username">用户名</label>
+              <input type="text" class="form-control" id="username">
+            </div>
+            <div class="form-group">
+              <label for="password">密码</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary">登录</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      // 当点击按钮时显示模态框
+      $('#login-btn').click(function () {
+        $('#login-modal').modal('show');
+      });
+    });
+  </script>
+</body>
+
+
+<div class="container">
+  <ul class="nav nav-tabs nav-justified custom">
+    <li class="nav-item">
+      <a class="nav-link active" href=" #one">最新上架</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#two">独家畅品</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=" #three">重点推荐</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=" #four">电子书</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=" #five">网络文学</a>
+    </li>
+  </ul>
+  <div class="tab-content border mt-2">
+    <div class=" tab-pane fade show active" id="one">最新上架面板内容
+      <div class="row no-gutters">
+        <div class="col-3 p-3 border"><img
+            src="https://img10.360buyimg.com/n1/jfs/t1/34217/29/1013/758541/5caefa5eE5374fbcc/86f9d2164c89e2a9.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">故宫文化 宫廷御扇 艺术团扇中式古风扇子女</a>
+          <div class=" price">&yen;93.40&nbsp;&nbsp;<span class=" color">&yen;129.8</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img12.360buyimg.com/n1/jfs/t1/6208/15/25307/173477/634448a5E19d03554/547846f6f20d6ad7.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">书签古风中国风创意定制励志金属书签书夹毕业礼物</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class=" color">&yen; 59.90</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/208987/24/7187/147544/617bd243E69dd2ab5/3e05dd0bd4b18b8e.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">故宫文化 故宫金榜题名系列中性笔套装礼盒</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class=" color">&yen; 138.00</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img14.360buyimg.com/n1/jfs/t1/52932/10/21767/196828/646c775fF44022728/245632219a7c3061.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">故宫文化 紫禁营造脊兽书签便签套装 书夹便签</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class=" color">&yen; 138.00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img10.360buyimg.com/n1/jfs/t1/34217/29/1013/758541/5caefa5eE5374fbcc/86f9d2164c89e2a9.jpg.avif"
+            alt=" " class="img-fluid">
+          <aclass="title”href="#">故宫文化 宫廷御扇 艺术团扇中式古风扇子女</a>
+            <div class=" price">&yen;93.40&nbsp;&nbsp;<span class="color">&yen;129.8</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img12.360buyimg.com/n1/jfs/t1/6208/15/25307/173477/634448a5E19d03554/547846f6f20d6ad7.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">书签古风中国风创意定制励志金属书签书夹毕业礼物</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class=" color">&yen; 59.90</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/208987/24/7187/147544/617bd243E69dd2ab5/3e05dd0bd4b18b8e.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">故宫文化 故宫金榜题名系列中性笔套装礼盒</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class=" color">&yen; 138.00</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img14.360buyimg.com/n1/jfs/t1/52932/10/21767/196828/646c775fF44022728/245632219a7c3061.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">故宫文化 紫禁营造脊兽书签便签套装 书夹便签</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class="color">&yen; 138.00</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="two">
+      独家畅品面板内容
+      <div class="row no-gutters">
+        <div class="col-3 p-3 border"><img
+            src="https://img10.360buyimg.com/n1/jfs/t1/34217/29/1013/758541/5caefa5eE5374fbcc/86f9d2164c89e2a9.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">故宫文化 宫廷御扇 艺术团扇中式古风扇子女</a>
+          <div class=" price">&yen;93.40&nbsp;&nbsp;<span class=" color">&yen;129.8</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/214983/17/2654/123584/617f64c3E7621d8d6/010d83fdc508087a.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">上新了文创 故宫小夜灯 纸艺DIY文创礼品纸雕</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class=" color">&yen; 138.00</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img30.360buyimg.com/n1/jfs/t1/6088/35/28933/106361/641ab4b2F240c7b8c/714bbf7890757705.jpg.avif"
+            alt="" class="img-fluid">
+          <aclass="title”href="#"> 上新了文创 故宫十八籽佛珠手串 菩提子十八子文玩手链 礼物生日礼品</a>
+            <div class=" price">&yen;91.30&nbsp;&nbsp;<span class=" color">&yen;182.60</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img30.360buyimg.com/n1/jfs/t1/125072/11/24492/80824/6305c352Edff35b02/a05b07e7f2e88a18.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">商业的本质和互联网</a>
+          <div class=" price">&yen;34. 50&nbsp; &nbsp;<span class=" color">&yen;69.00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img10.360buyimg.com/n1/jfs/t1/34217/29/1013/758541/5caefa5eE5374fbcc/86f9d2164c89e2a9.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">五万年中国简史</a>
+          <div class=" price">&yen;93.40&nbsp;&nbsp;<span class=" color">&yen;129.8</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/214983/17/2654/123584/617f64c3E7621d8d6/010d83fdc508087a.jpg.avif"
+            alt=" " class="img-fluid"><a class="title" href="#">上新了文创 故宫小夜灯 纸艺DIY文创礼品纸雕</a>
+          <div class=" price">&yen;69.00&nbsp; &nbsp;<span class=" color">&yen; 138.00</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img30.360buyimg.com/n1/jfs/t1/6088/35/28933/106361/641ab4b2F240c7b8c/714bbf7890757705.jpg.avif"
+            alt="" class="img-fluid">
+          <aclass="title”href="#"> 上新了文创 故宫十八籽佛珠手串 菩提子十八子文玩手链 礼物生日礼品</a>
+            <div class=" price">&yen;91.30&nbsp;&nbsp;<span class=" color">&yen;182.60</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img30.360buyimg.com/n1/jfs/t1/125072/11/24492/80824/6305c352Edff35b02/a05b07e7f2e88a18.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">商业的本质和互联网</a>
+          <div class=" price">&yen;34. 50&nbsp; &nbsp;<span class=" color">&yen;69.00</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="three">重点推荐面板内容
+      <div class="row no-gutters">
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img10.360buyimg.com/n1/jfs/t1/169822/31/27459/127329/6192163aE82649a73/ab569626fa401fe4.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫纸艺灯 DIY创意纸雕灯装饰灯 折纸小夜灯生日 礼物</a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/179715/35/32734/101897/63edd88aFf63b4999/e2791e023c2d982a.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">山海文渊 故宫3D立体手撕便签 </a>
+          <div class="price">&yen;39.60&nbsp;&nbsp;<span class="color">&yen;79.20</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/169822/31/27459/127329/6192163aE82649a73/ab569626fa401fe4.jpg.avif"
+            alt="" class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫纸艺灯 DIY创意纸雕灯装饰灯 折纸小夜灯生日 礼物 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/179715/35/32734/101897/63edd88aFf63b4999/e2791e023c2d982a.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">山海文渊 故宫3D立体手撕便签 </a>
+          <div class="price">&yen;39.60&nbsp;&nbsp;<span class="color">&yen;79.20</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="four">电子书面板内容
+      <div class="row no-gutters">
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/169822/31/27459/127329/6192163aE82649a73/ab569626fa401fe4.jpg.avif"
+            alt="" class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫纸艺灯 DIY创意纸雕灯装饰灯 折纸小夜灯生日 礼物 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/179715/35/32734/101897/63edd88aFf63b4999/e2791e023c2d982a.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">山海文渊 故宫3D立体手撕便签 </a>
+          <div class="price">&yen;39.60&nbsp;&nbsp;<span class="color">&yen;79.20</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img11.360buyimg.com/n1/jfs/t1/199835/31/12923/636854/61698660Ec29f3859/8d6d29714a213ab3.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">礼赋 京剧脸谱餐具工艺摆件故宫中国风特色礼物</a>
+          <div class="price">&yen; 8.90&nbsp; &nbsp;<span class="color">&yen;20.00</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/169822/31/27459/127329/6192163aE82649a73/ab569626fa401fe4.jpg.avif"
+            alt="" class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫纸艺灯 DIY创意纸雕灯装饰灯 折纸小夜灯生日 礼物 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/179715/35/32734/101897/63edd88aFf63b4999/e2791e023c2d982a.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">山海文渊 故宫3D立体手撕便签 </a>
+          <div class="price">&yen;39.60&nbsp;&nbsp;<span class="color">&yen;79.20</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img11.360buyimg.com/n1/jfs/t1/199835/31/12923/636854/61698660Ec29f3859/8d6d29714a213ab3.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">礼赋 京剧脸谱餐具工艺摆件故宫中国风特色礼物</a>
+          <div class="price">&yen; 8.90&nbsp; &nbsp;<span class="color">&yen;20.00</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="five">网络文学面板内容
+      <div class="row no-gutters">
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/169822/31/27459/127329/6192163aE82649a73/ab569626fa401fe4.jpg.avif"
+            alt="" class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫纸艺灯 DIY创意纸雕灯装饰灯 折纸小夜灯生日 礼物 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/179715/35/32734/101897/63edd88aFf63b4999/e2791e023c2d982a.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">山海文渊 故宫3D立体手撕便签 </a>
+          <div class="price">&yen;39.60&nbsp;&nbsp;<span class="color">&yen;79.20</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img11.360buyimg.com/n1/jfs/t1/199835/31/12923/636854/61698660Ec29f3859/8d6d29714a213ab3.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">礼赋 京剧脸谱餐具工艺摆件故宫中国风特色礼物</a>
+          <div class="price">&yen; 8.90&nbsp; &nbsp;<span class="color">&yen;20.00</span></div>
+        </div>
+        <div class="col-3 p-3 border">
+          <img
+            src="https://img10.360buyimg.com/n1/jfs/t1/169822/31/27459/127329/6192163aE82649a73/ab569626fa401fe4.jpg.avif"
+            alt="" class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫纸艺灯 DIY创意纸雕灯装饰灯 折纸小夜灯生日 礼物 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class=" col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/111052/32/28371/102217/62f1ffc7Ee32fe22e/2d45dd25d12f2879.jpg.avif"
+            alt=" " class="img-fluid">
+          <a class="title" href="#">上新了文创 故宫泡茶杯 陶瓷茶水分离杯 送长辈送男友生日父亲节礼物礼品 </a>
+          <div class=" price">&yen;27.50&nbsp;&nbsp;<span class=" color">&yen ;55. 00</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img30.360buyimg.com/n1/jfs/t1/179715/35/32734/101897/63edd88aFf63b4999/e2791e023c2d982a.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">山海文渊 故宫3D立体手撕便签 </a>
+          <div class="price">&yen;39.60&nbsp;&nbsp;<span class="color">&yen;79.20</span></div>
+        </div>
+        <div class="col-3 p-3 border"><img
+            src="https://img11.360buyimg.com/n1/jfs/t1/199835/31/12923/636854/61698660Ec29f3859/8d6d29714a213ab3.jpg.avif"
+            alt="" class="img-fluid"><a class="title" href="#">礼赋 京剧脸谱餐具工艺摆件故宫中国风特色礼物</a>
+          <div class="price">&yen; 8.90&nbsp; &nbsp;<span class="color">&yen;20.00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--尾部-->
+<footer>
+  <div class=" container-fluid text-center">
+    <div class="row">
+      <div class="col-md-8" style="padding-top:10px ;">
+        <p>
+          班级：xxx级软件工程专升本xxx班 <br>学号：xxxxxxxxx 姓名：xxx
+          <br /> 联系方式：xxxxxxxxx <br />
+        </p>
+      </div>
+      <div class="col-md-4" style="padding-top:10px ;">
+        <button class="button button-action button-box button-giant button-longshadow-left">
+          <i class="fa fa-share-alt"></i></button>
+        <button
+          class="button button-highlight button-box button-giant button-longshadow-right button-longshadow-expand"><i
+            class="fa fa-rss"></i></button>
+        <button class="button button-primary button-box button-giant button-longshadow-right"><i
+            class="fa fa-twitter"></i></button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  $(function () {
+    $(".nav-item a").on("click", function (e) {
+      e.preventDefault()
+      $(this).tab("show")
+    })
+  })
+</script>
+</body>
+
+</html>
+
+
+<script>
+  $(function () {
+    $(".nav-item a").on("click", function (e) {
+      e.preventDefault()
+      $(this).tab("show")
+    })
+  })
+</script>
+</body>
+
+</html>
